@@ -51,6 +51,7 @@ jobs:
           key: ${{ secrets.AWS_SSH_KEY }}
           script: |
             set -e
+            sudo -i
             cd ${{ secrets.SERVER_PATH }}
             git pull origin main
             docker compose down
